@@ -1,0 +1,813 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    font-size: 0.9rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: aliceblue;
+    padding: 13px 30px ;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3sec ease;
+}
+
+button:hover{
+    background-color: rgb(137, 187, 214);
+
+}
+.navbar{
+    background-color: rgb(10, 240, 163);
+    font-size: 20px;
+    top: 0;
+    left: 0;
+
+}
+hr{
+    width: 30px;
+    height: 2px;
+    background-color: rgb(41, 2, 218);
+}
+
+.star i{
+    font-size: 0.8rem;
+    color: rgb(4, 146, 255);
+}
+.navbar img {
+    margin-right: 85px; /* Adjust the value as needed for the desired space */
+}
+.navbar-light .navbar-nav .nav-link{
+    padding : 0 20px;
+    color: black;
+    transform: 0.3sec ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active , .navbar i.active {
+    color: coral;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the margin as needed for closer spacing */
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Remove margin from the last item to keep it aligned */
+}
+
+
+#home {
+    background-image: url(e1.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top 60px center; /* Changed this line */
+    background-repeat: no-repeat; /* Added to prevent tiling */
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    padding-left: 120px; /* Added for space from the left */
+    padding-top: 60px;
+}
+
+
+.brand-section .row {
+    text-align: center;
+}
+
+.brand-section .img-field {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 5px;
+    object-fit: contain;
+}
+
+#home span{
+    color: rgb(100, 146, 202);
+}
+
+#new .one {
+    position: relative;
+}
+
+#new .one img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s ease;
+}
+
+#new .one .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Add a background to make the text stand out */
+    transition: 0.3s ease;
+}
+
+#new .one:hover .details {
+    cursor: pointer;
+    background-color: rgba(170, 238, 238, 0.5); /* Change background color on hover */
+}
+
+#new .one .details h5
+{
+    
+    margin-right: 100px;
+    font-style: Roboto;
+}
+#new .one .details button {
+    margin-right: 180px;
+    margin-bottom: 50px;
+    
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: black; /* Text color remains black */
+    background-color: transparent; /* Ensure the background is transparent */
+    border-bottom: 1px solid;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+}
+
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    flex: 1 1 calc(33.333% - 2rem); /* Adjust based on how many items per row */
+    box-sizing: border-box;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+    gap: 2rem; /* Space between items */
+}
+
+.product img{
+    transition: 0.3s all;
+}
+.product :hover img{
+    opacity: 0.7;
+}
+.product .buy-button {
+    opacity: 0.7;
+    transition: 0.3s all;
+    transform: translateY(10px); /* Adding initial transform to make the transition visible */
+}
+
+.product:hover .buy-button {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#banner {
+    background-image: url("banner1.png");
+    width: 100%;
+    height: 100vh; /* Full viewport height for a dramatic effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This creates the parallax effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: To make text stand out */
+    text-align: center; /* Optional: To center-align text */
+}
+
+.content {
+    padding: 20px;
+
+    background-color: #f1f1f1; /* Optional: To create contrast between sections */
+}
+
+footer{
+    background-color: rgb(108, 170, 199);
+}
+
+.payment-icons a, .social-icons a {
+    margin: 0 10px; /* Adjust the spacing between the icons */
+}
+
+.copyright {
+    
+    padding: 20px 0;
+}
+
+.payment-icons, .social-icons, .text-nowrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5{
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li{
+    padding-bottom: 4px;
+}
+footer li a{
+    font-size: 0.8rem;
+    color: rgb(0, 21, 255);
+}
+footer li a :hover{
+    font-size: 0.8rem;
+    color: rgb(56, 105, 142);
+}
+
+.sidebar{
+    margin-top: 160px;
+    margin-left: 30px;
+    width: 25%; /* Adjust the width of the sidebar */
+    background-color: #f4f4f4; /* Background color for the sidebar */
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#shop {
+    background-image: url("Shop now!.png");
+    width: 100%;
+    height: 100vh; /* Full viewport height for a dramatic effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This creates the parallax effect */
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: To make text stand out */
+    text-align: center; /* Optional: To center-align text */
+}
+#offers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color similar to your image */
+}
+
+.offer-card {
+    width: 18%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.discount-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #ff4500;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.offer-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.offer-card h3 {
+    font-size: 16px;
+    color: #333;
+}
+#mega-deals {
+    background-color: rgb(137, 187, 214); /* Purple background color */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.deal-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.deal-image img {
+    max-height: 120px; /* Adjust size as needed */
+    margin: 0 20px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.deal-content {
+    flex: 1;
+}
+
+.deal-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.deal-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: #E63946; /* Red button color */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #D62828; /* Darker red on hover */
+}
+
+form{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 60px;
+    background: rgb(236, 239, 240) ;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+form input{
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: black;
+    font-size: 19px;
+    padding: 0 30px;
+}
+
+form button{
+    padding: 0 40px;
+    height: 100%;
+    background: #ee0505;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+::placeholder{
+    color: #333;
+}
+
+#show-more-btn{
+    background: #e61d1d;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin:10px auto 100px;
+    cursor: pointer;
+    display: block;
+}
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.product-card {  
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none; /* Ensures no underline for h3 */
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #e94e77;
+    margin-bottom: 5px;
+}
+
+.product-card .original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through; /* Keeps line-through for original price */
+    margin-bottom: 10px;
+}
+
+.product-card .discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#hot-deals-banner {
+    background: url('left.jpeg') left center no-repeat, /* Left image */
+                url('right.jpg') right center no-repeat, /* Right image */
+                linear-gradient(to right, #e3a074, #618e9b); /* Background gradient */
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: auto 100%; /* Adjust this to fit your image */
+    background-blend-mode: overlay; /* Overlay images with the gradient */
+}
+
+/* Product Details Section */
+#product-details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-images {
+    flex: 1;
+}
+
+.product-images img {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-images img:hover {
+    transform: scale(1.05);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info .price {
+    font-size: 1.6rem;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.product-info .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.product-info .discount {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-info .rating {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.product-info .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-info select {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    width: 60px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Additional Details Section */
+#additional-details {
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+#additional-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+#additional-details p {
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-images img {
+        width: 80%;
+    }
+
+    .product-info {
+        text-align: center;
+    }
+}
+
+/* Blog Section Styling */
+.blog-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin-top: 90px;
+}
+
+.blog-post {
+    width: 38%;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.blog-info p {
+    font-size: 1em;
+    color: #999;
+}
+
+/* Hover Effect */
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Banner Styling */
+.banner {
+    background-image: url('image2.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 90px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    color: #fff;
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.discount {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.discount h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.discount p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.text {
+    text-align: right;
+}
+
+.text h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text p {
+    font-size: 2em;
+    margin: 10px 0;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.text a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.text a:hover {
+    color: #ffd700;
+    border-bottom-color: #ffd700;
+}
+
+
+/* Post Row Styling */
+.post-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.post {
+    width: 30%; /* Three posts will take up the full row */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post-image {
+    overflow: hidden; /* Hide overflow to make sure the image doesn't go outside the box */
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Smooth transition for image */
+}
+
+.post:hover img {
+    transform: scale(1.1); /* Image zooms in slightly on hover */
+}
+
+.post-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.post-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.post-content p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Hover Effect */
+.post:hover {
+    transform: translateY(-5px); /* Lift the entire post on hover */
+}
+
+
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Space between images */
+    padding: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+

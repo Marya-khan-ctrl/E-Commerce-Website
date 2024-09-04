@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .cart-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item img {
+            width: 80px;
+            height: auto;
+        }
+        .cart-item .product-name {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .cart-item .product-price, .cart-item .quantity-selector {
+            margin: 0 10px;
+        }
+        .cart-item .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .cart-summary {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .cart-summary div {
+            margin-bottom: 10px;
+        }
+        .checkout-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1 class="cart-header">Your Cart</h1>
+
+        <div class="cart-item" data-price="50">
+            <img src="pinkwatch.png" alt="Product 1">
+            <div class="product-name">Product 1</div>
+            <div class="product-price">$50.00</div>
+            <input type="number" class="quantity-selector" value="1" min="1">
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="cart-item" data-price="30">
+            <img src="e1.png" alt="Product 2">
+            <div class="product-name">Product 2</div>
+            <div class="product-price">$30.00</div>
+            <input type="number" class="quantity-selector" value="1" min="1">
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="cart-summary">
+            <div>Subtotal: $<span id="subtotal">0.00</span></div>
+            <div>Tax (5%): $<span id="tax">0.00</span></div>
+            <div>Shipping: $<span id="shipping">10.00</span></div>
+            <div>Total: $<span id="total">0.00</span></div>
+            <button class="checkout-btn" onclick="window.location.href='payment.html'">Proceed to Checkout</button>
+
+        </div>
+    </div>
+
+    <script>
+        const cartItems = document.querySelectorAll('.cart-item');
+        const subtotalEl = document.getElementById('subtotal');
+        const taxEl = document.getElementById('tax');
+        const shippingEl = document.getElementById('shipping');
+        const totalEl = document.getElementById('total');
+
+        function calculateTotal() {
+            let subtotal = 0;
+            cartItems.forEach(item => {
+                const price = parseFloat(item.getAttribute('data-price'));
+                const quantity = item.querySelector('.quantity-selector').value;
+                subtotal += price * quantity;
+            });
+            const tax = subtotal * 0.05; // 5% tax
+            const shipping = 10.00; // Flat shipping rate
+
+            subtotalEl.textContent = subtotal.toFixed(2);
+            taxEl.textContent = tax.toFixed(2);
+            totalEl.textContent = (subtotal + tax + shipping).toFixed(2);
+        }
+
+        // Initial calculation
+        calculateTotal();
+
+        // Recalculate when quantity changes
+        document.querySelectorAll('.quantity-selector').forEach(selector => {
+            selector.addEventListener('change', calculateTotal);
+        });
+
+        // Remove item from cart
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                const item = event.target.closest('.cart-item');
+                item.remove();
+                calculateTotal();
+            });
+        });
+    </script>
+</body>
+</html>

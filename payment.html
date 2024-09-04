@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+       
+            body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("payment.png");
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+}
+
+        
+
+        .wrapper {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .payment h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form {
+            margin-bottom: 15px;
+        }
+
+        .card {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .card-grp {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-item {
+            width: 48%;
+        }
+
+        .BTN {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            background-color: #5991cd;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .BTN:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional features styling */
+        .card-logos {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .card-logos img {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .remember input {
+            margin-right: 10px;
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 15px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .secure img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="payment">
+            <h2>Payment Gateway</h2>
+            
+            <div class="card-logos">
+                <img src="visa.jpg" alt="Visa">
+                <img src="mastercard.png" alt="MasterCard">
+                <img src="amex.png" alt="American Express">
+            </div>
+            
+            <div class="form">
+                <div class="card">
+                    <label class="label">Card Holder:</label>
+                    <input class="input" name="card-holder" placeholder="John Doe">
+                </div>
+            </div>
+            <div class="form">
+                <div class="card">
+                    <label class="label">Card Number:</label>
+                    <input class="input" name="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="card-grp">
+                    <div class="card-item">
+                        <label class="label">Expiry Date:</label>
+                        <input class="input" name="expiry-date" placeholder="MM/YY">
+                    </div>
+                    <div class="card-item">
+                        <label class="label">CVC:</label>
+                        <input class="input" name="CVC" placeholder="123">
+                    </div>
+                </div>
+
+                <div class="remember">
+                    <input type="checkbox" id="save-card" name="save-card">
+                    <label for="save-card">Save card details for future purchases</label>
+                </div>
+
+                <div class="BTN">PAY NOW</div>
+
+                <div class="secure">
+                    <img src="secure.png" alt="Secure">
+                    Secure payment powered by Stripe
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+</body>
+</html>
